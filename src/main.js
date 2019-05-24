@@ -5,6 +5,8 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 // import router from './router/index.js'
 import './style/element-variables.scss'
+import './router/premisson.js'
+
 import router from './router'
 Vue.use(ElementUI)
 

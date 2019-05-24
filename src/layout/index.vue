@@ -11,7 +11,7 @@
     <el-main>
       <app-main/>
     </el-main>
-    <el-footer></el-footer>
+    <!-- <el-footer></el-footer> -->
   </el-container>
 </el-container>
 </template>

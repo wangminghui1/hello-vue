@@ -50,6 +50,7 @@
 
 <script>
 /* eslint-disable */
+import {setToken} from '../../utils/auth'
 export default {
   name: "login",
   data() {
@@ -71,8 +72,9 @@ export default {
     showPwd: function() {},
     handleLogin: function() {
       console.log(this.$router);
+      setToken("王明辉");
       this.$router.push({
-        name: "home",
+        name: "index",
         params: {
           user: this.loginForm
         }
