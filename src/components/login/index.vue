@@ -1,15 +1,10 @@
 <template>
   <div class="login-container">
     <el-form ref="loginForm" :model="loginForm" label-position="left" class="login-form">
-
       <div class="title-container">
         <h3 class="title">登录表单</h3>
       </div>
-
-      <el-form-item prop="username">    
-        <!-- <span class="svg-container">
-          <svg-icon icon-class="user" />
-        </span> -->
+      <el-form-item prop="username">
         <el-input
           ref="username"
           v-model="loginForm.username"
@@ -21,11 +16,7 @@
           clearable
         />
       </el-form-item>
-
       <el-form-item prop="password">
-        <!-- <span class="svg-container">
-          <svg-icon icon-class="password" />
-        </span> -->
         <el-input
           :key="passwordType"
           ref="password"
@@ -42,14 +33,17 @@
           <!-- <svg-icon :icon-class="passwordType === 'password' ? 'eye' : 'eye-open'" /> -->
         </span>
       </el-form-item>
-
-      <el-button :loading="loading" type="primary" style="width:100%;margin-bottom:30px;background-color: darkslategray;" @click.native.prevent="handleLogin">登录</el-button>
-
+      <el-button
+        :loading="loading"
+        type="primary"
+        style="width:100%;margin-bottom:30px;background-color: darkslategray;"
+        @keyup.enter="handleLogin"
+        @click.native.prevent="handleLogin"
+      >登录</el-button>
       <div class="tips" style="display: none">
         <span style="margin-right:20px;">username: admin</span>
-        <span> password: any</span>
+        <span>password: any</span>
       </div>
-
     </el-form>
   </div>
 </template>
@@ -57,44 +51,38 @@
 <script>
 /* eslint-disable */
 export default {
-    name : "login",
-    data(){
-        
-
-        return{
-            loginForm: {
-        username: 'admin',
-        password: '111111'
+  name: "login",
+  data() {
+    return {
+      loginForm: {
+        username: "admin",
+        password: "111111"
       },
-    //   loginRules: {
-    //     username: [{ required: true, trigger: 'blur', validator: validateUsername }],
-    //     password: [{ required: true, trigger: 'blur', validator: validatePassword }]
-    //   },
+      //   loginRules: {
+      //     username: [{ required: true, trigger: 'blur', validator: validateUsername }],
+      //     password: [{ required: true, trigger: 'blur', validator: validatePassword }]
+      //   },
       loading: false,
-      passwordType: '',
+      passwordType: "",
       redirect: undefined
+    };
+  },
+  methods: {
+    showPwd: function() {},
+    handleLogin: function() {
+      console.log(this.$router);
+      this.$router.push({
+        name: "home",
+        params: {
+          user: this.loginForm
         }
-    },
-    methods :{
-        showPwd : function(){
-
-        },
-        handleLogin : function(){
-          console.log(this.$router)
-          this.$router.push({name:"hello",params:{
-            user:this.loginForm
-          }})
-        }
-    },
-    watch :{
-
-    },
-    computed : {
-
+      });
     }
-}
+  },
+  watch: {},
+  computed: {}
+};
 </script>
-
 <style lang="scss" scoped>
     $bg:#2d3a4b;
 $dark_gray:#889aa4;
