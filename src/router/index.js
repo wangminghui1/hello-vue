@@ -20,7 +20,7 @@ const routes = [
         component: () => import('@/layout/index.vue'),
         redirect: "/dashboard",
         children: [{
-            path: "dashboard",
+            path: "/dashboard",
             name: "Dashboard",
             component: () => import("@/components/HelloWorld.vue")
         },
@@ -35,14 +35,19 @@ const routes = [
             name: "hello",
             component: () => import("../components/HelloWorld")
         },
-        ]
-    },
-    {
-        path: "/home",
-        name: "home",
-        component: () => import("../layout/index"),
-        children : [
-            
+        {
+            path: "/home",
+            name: "home",
+            component: () => import("../components/HelloWorld"),
+            children : [
+                
+            ]
+        },
+        {
+            path:"/table:name",
+            name : "table",
+            component : ()=> import("../components/tables/index")
+        }
         ]
     },
     // 404 page must be placed at the end !!!

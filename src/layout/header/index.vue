@@ -1,4 +1,13 @@
-<template>
+<template>  
+<div>
+  <div class="left-menu">
+  <button>切换</button>
+  </div>
+  <div>
+    <!-- <el-input  type="search">
+
+    </el-input> -->
+  </div>
   <div class='right-menu'>
     <el-dropdown @command="haldCommond">
       <div class="icon-home">
@@ -12,18 +21,33 @@
       </el-dropdown-menu>
     </el-dropdown>
   </div>
+</div>
 </template>
 
 <script>
+
+/* eslint-disable */
+import {rmToken} from '../../utils/auth'
+
 export default {
   name: "wmh-header",
   methods:{
       haldCommond : function(ev){
-          this.$message(JSON.stringify(this.$router.options.routes));
-          if(ev.indexOf("登录页面") > 0){
+          // this.$message(JSON.stringify(this.$router.options.routes));
+          if(ev.indexOf("登录页面") != -1){
+            rmToken();
             this.$router.push({name:"login"});
+          } else if(ev.indexOf("q") != -1){
+            this.$router.push({name:"home"});
+          }else{
+            console.log(1);
           }
       }
+  },
+  data(){
+    return{
+      isCollapse : true
+    }
   }
 };
 </script>
@@ -36,6 +60,9 @@ export default {
   /* line-height: 50px; */
   width: 70px;
   right: 0;
+}
+.left-menu{
+  float: left;
 }
 .el-dropdown{
     margin-top: 5px;

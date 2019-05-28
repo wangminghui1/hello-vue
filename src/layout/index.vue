@@ -5,7 +5,7 @@
       <aside-meou />
   </el-aside>
   <el-container>
-    <el-header style="height: 50px;">
+    <el-header style="height: 60px;">
         <wmh-header/>
     </el-header>
     <el-main>
@@ -50,7 +50,8 @@ export default {
   }
   
   .el-main {
-    /* background-color: #E9EEF3; */
+    background-color: #E9EEF3;
+    /* background-color: #e9f0fa; */
     color: #333;
     text-align: center;
     line-height: 160px;

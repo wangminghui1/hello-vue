@@ -1,15 +1,12 @@
 <template>
   <div class="hello">
-      <!-- {{this.$router}} -->
-      <!-- <img src=""> -->
-      <h1>欢迎页</h1>
-      <p>{{cook}}</p>
+    <data-board></data-board>
   </div>
 </template>
 
 <script>
 import {getToken} from '../utils/auth'
-
+import dataBoard from './dataBoard'
 export default {
   name: 'HelloWorld',
   props: {
@@ -19,6 +16,9 @@ export default {
     return {
       cook : getToken()
     }
+  },
+  components : {
+    dataBoard
   }
 }
 </script>

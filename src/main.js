@@ -6,10 +6,11 @@ import 'element-ui/lib/theme-chalk/index.css';
 // import router from './router/index.js'
 import './style/element-variables.scss'
 import './router/premisson.js'
+import FullCalendar from 'vue-fullcalendar'
 
 import router from './router'
 Vue.use(ElementUI)
-
+Vue.use(FullCalendar)
 Vue.config.productionTip = false
 
 new Vue({
