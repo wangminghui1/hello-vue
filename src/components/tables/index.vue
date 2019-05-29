@@ -35,7 +35,6 @@
         custom-class = "dilo"
         title="表单"
         :modal-append-to-body = "modd"
-        :modal = "moddd"
         :visible.sync="dialogVisible"
         width="72%"
         margin-top= '10vh'

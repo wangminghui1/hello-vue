@@ -7,7 +7,7 @@
             <div class="sess"><span style="font-size: 12px;">考勤人数</span></div>
            </div>   
            <div><!-- 内容-->
-           <svg-icon icon-class="人力中心" class-name="card-panel-icon" />
+           <!-- <svg-icon icon-class="人力中心" class-name="card-panel-icon" /> -->
            12459</div>
         </div></el-col>
         <el-col :span="6"><div class="grid-content bg-purple">2</div></el-col>

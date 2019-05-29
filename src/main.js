@@ -8,6 +8,8 @@ import './style/element-variables.scss'
 import './router/premisson.js'
 import FullCalendar from 'vue-fullcalendar'
 
+import './assets/icons/iconfont.css';
+
 import router from './router'
 Vue.use(ElementUI)
 Vue.use(FullCalendar)

@@ -1,4 +1,5 @@
 <template>
+
      <el-menu
       default-active="2"
       class="el-menu-vertical-demo"
@@ -60,7 +61,6 @@
       </el-menu-item>
        
     </el-menu>
-  
 </template>
 
 <script>
@@ -77,7 +77,8 @@ export default {
     data(){
       return{
         msg : true,
-        isCollapse : false
+        isCollapse : false,
+        reqs : false
       }
     }
 }

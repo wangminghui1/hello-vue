@@ -14,6 +14,7 @@ export default {
   },
   data(){
     return {
+      reqs :false,
       cook : getToken()
     }
   },

@@ -1,6 +1,8 @@
 <template>
 <!-- ele布局容器 -->
+
 <el-container>
+  
   <el-aside width="200px">
       <aside-meou />
   </el-aside>
@@ -8,9 +10,14 @@
     <el-header style="height: 60px;">
         <wmh-header/>
     </el-header>
+    <el-scrollbar
+     :native='reqs'
+     style="height:100%"
+     >
     <el-main>
       <app-main/>
     </el-main>
+    </el-scrollbar>
     <!-- <el-footer></el-footer> -->
   </el-container>
 </el-container>
@@ -26,6 +33,11 @@ export default {
         asideMeou,
         wmhHeader,
         appMain
+    },
+    data (){
+      return{
+        reqs : false
+      }
     }
 }
 </script>

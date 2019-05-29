@@ -32,6 +32,21 @@
   <el-form-item label="活动形式">
     <el-input type="textarea" autosize v-model="form.desc"></el-input>
   </el-form-item>
+  <el-form-item label="活动形式">
+    <el-input type="textarea" autosize v-model="form.desc"></el-input>
+  </el-form-item>
+  <el-form-item label="活动形式">
+    <el-input type="textarea" autosize v-model="form.desc"></el-input>
+  </el-form-item>
+  <el-form-item label="活动形式">
+    <el-input type="textarea" autosize v-model="form.desc"></el-input>
+  </el-form-item>
+  <el-form-item label="活动形式">
+    <el-input type="textarea" autosize v-model="form.desc"></el-input>
+  </el-form-item>
+  <el-form-item label="活动形式">
+    <el-input type="textarea" autosize v-model="form.desc"></el-input>
+  </el-form-item>
   <el-form-item>
     <el-button type="primary" @click="onSubmit">立即创建</el-button>
     <el-button>取消</el-button>
@@ -45,6 +60,7 @@
     data() {
       return {
         req : true,
+        reqs : false,
         form: {
           name: '',
           region: '',
